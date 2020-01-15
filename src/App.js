@@ -23,16 +23,16 @@ class App extends Component {
     if (this.state.toggle === true) {
       return this.state.filteredEvents.map(function(item) {
         return <div id="card">
-                      <h2 style={{color: "#0e1111"}}>{item.VenueName}</h2>
-                      <h3 style={{color: "white"}}>{item.MinPrice}</h3>
+                      <h2>{item.VenueName}</h2>
+                      <h3><span style={{color: "#0e1111", textShadow: "none" }}>from  </span>{item.MinPrice}</h3>
                       <p>{item.Date}, {item.Time}</p>
                   </div>
     })
     } else {
       return this.state.events.map(function(item) {
         return <div id="card">
-                      <h2 style={{color: "#0e1111", textDecoration: "underline"}}>{item.VenueName}</h2>
-                      <h3 style={{color: "white" }}><span style={{color: "#0e1111", textShadow: "none" }}>from  </span>{item.MinPrice}</h3>
+                      <h2>{item.VenueName}</h2>
+                      <h3><span style={{color: "#0e1111", textShadow: "none" }}>from  </span>{item.MinPrice}</h3>
                       <p>{item.Date}, {item.Time}</p>
                   </div>
     })
